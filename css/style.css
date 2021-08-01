@@ -1,0 +1,841 @@
+/* STYLESHEET */
+@font-face 
+{
+    font-family: noexit;
+    src: url(http://files7.webydo.com/91/9140034/UploadedFiles/805AD88C-21B4-02B8-4D75-342F16BCBE43.woff);
+}
+@font-face
+{
+	font-family: noexit-reg;
+	src: url(http://files7.webydo.com/91/9140034/UploadedFiles/4B400761-E443-A328-71D7-46B027CFD2DE.woff);
+}
+@font-face
+{
+    font-family: neue;
+    src: url(https://fonts.gstatic.com/s/bebasneue/v2/JTUSjIg69CK48gW7PXoo9Wlhyw.woff2);
+}
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+img
+{
+    pointer-events: none;
+}
+
+body 
+{
+    width: 100%;
+    min-height: 100vh;
+    background: url('https://i.ibb.co/Gccdxfm/background.jpg') no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body:before 
+{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.50);
+}
+
+.loader
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 9999999999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loader img
+{
+    max-width: 100%;
+}
+.app 
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url('https://i.pinimg.com/originals/13/ae/7b/13ae7bade26f0d798e16b85f265a2c68.jpg') no-repeat;
+    background-size: 100% 100%;
+    border: 1px solid gold;
+    border-radius: 3px;
+    overflow: hidden;
+    padding-bottom: 50px;
+}
+.app:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.50);
+    opacity: 0.9;
+}
+.app footer
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    font-family: 'noexit-reg';
+    display: flex;
+    align-items: center;
+    color: #fff;
+    border-top: 1px solid gold;
+    justify-content: center;
+    background: #333;
+    padding: 10px;
+    text-align:center;
+    white-space: no-wrap;
+}
+.app header 
+{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 70px;
+    background: url('../img/bg.jpeg') no-repeat;
+    background-size: 100% 100%;
+    border-bottom: 1px solid gold;
+}
+header 
+{
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .progress
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: rgba(225,225,225,0.50);
+}
+header .progress:before
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 250px;
+	height: 100%;
+	background: #fff;
+}
+header .profile 
+{
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+header .level
+{
+	position: absolute;
+	bottom: 4px;
+	right: 4px;
+	font-size: 13px;
+	font-family: 'noexit-reg';
+	color: rgba(225,225,225,0.50);
+}
+header .badge
+{
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	font-size: 15px;
+	font-family: 'noexit-reg';
+	color: gold;
+}
+.profile .avatarBox 
+{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border: 2px solid #fff;
+    margin-right: 3px;
+    border-radius: 2px;
+}
+
+.avatarBox img 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+}
+
+.profile .nameBox 
+{
+    position: relative;
+    width: 120px height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    color: #fff;
+}
+
+.nameBox .nickname 
+
+{
+    margin-bottom: 23px;
+    font-family: 'noexit';
+    text-shadow: 0 1px 1px rgba(0,0,0,0.50);
+}
+
+.nameBox .guild {
+    float: left;
+    font-family: 'noexit';
+    text-shadow: 0 1px 1px rgba(0,0,0,0.50);
+} 
+
+.app .wrap
+{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	padding: 75px 5px 5px 5px;
+}
+.app .boxItem
+{
+	margin-top: 35px;
+	position: relative;
+	width: 100%;
+	height: 351px;
+	border-radius: 2px;
+	border: 1px solid gold;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	padding: 5px;
+	grid-gap: 5px;
+}
+.app .boxItem:before
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #2b3944;
+}
+.app .boxItem:after
+{
+    content: 'LUCKY ROYALE';
+    position: absolute;
+    top: -30px;
+    left: -1px;
+    width: 150px;
+    height: 30px;
+    background: gold;
+    border-top-left-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: 'noexit-reg';
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 0 0 2px #333;
+}
+.boxItem .box
+{
+	position: relative;
+	display: grid;
+	width: 100%;
+	height: 110px;
+	background: #fff;
+	place-items: center;
+	border-radius: 3px;
+}
+.boxItem .box.spin
+{
+	width: 100%;
+	grid-column: span 2;
+	font-family: 'noexit';
+	text-transform: uppercase;
+	font-size: 20px;
+}
+.boxItem .box.spin:before
+{
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: url('../img/spin.jpg') no-repeat;
+ background-size: 100% 100%;
+ border-radius: 3px;
+ z-index: 99;
+ cursor: pointer;
+}
+.boxItem .box .placeitems
+{
+	position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ border-radius:3px;
+}
+.placeitems img
+{
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ border-radius:3px;
+ border: 2px solid gold;
+}
+.box.active:before
+{
+ content: '';
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ right: 0px;
+ bottom: 0px;
+ border: 2px solid red;
+ z-index:999;
+ border-radius:3px;
+}
+
+.app .comment
+{
+    margin-top: 35px;
+    position: relative;
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid gold;
+    padding: 5px;
+}
+.app .comment:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #2b3944;
+}
+.app .comment:after
+{
+    content: 'Komentar';
+    position: absolute;
+    top: -30px;
+    left: -1px;
+    width: 150px;
+    height: 30px;
+    background: gold;
+    border-top-left-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: 'noexit-reg';
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 0 0 2px #333;
+}
+.comment .secs
+{
+    position: relative;
+    width: 100%;
+    height: 70px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 3px;
+    animation: slides 2s ease-in-out; forwards;
+    animation-delay: calc(0.2s * var(--i));
+    transition: 0.2s ease;
+}
+.comment .secs.active, .comment .secs:hover
+{
+    transform: scale(1.05);
+}
+@keyframes slides 
+{
+    from 
+    {
+        transform: translateZ(-50px);
+        opacity: 0;
+    }
+    to 
+    {
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+.comment .secs:nth-child(n+2)
+{
+    margin-top: 5px;
+}
+.comment .secs .profile
+{
+    position: relative;
+    background: #333;
+    width: 80px;
+    height: 65px;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+.comment .secs .profile img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    border: 1px solid #333;
+}
+.comment .secs .content
+{
+    position: relative;
+    /*left: -60px;*/
+    background: #333;
+    width: 100%;
+    height: 65px;
+    padding-left: 5px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.content h1
+{
+    font-family: 'noexit-reg';
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 3px;
+}
+.content p
+{
+    font-family: 'Arial';
+    font-size: 15px;
+    color: #fff;
+}
+
+.wrap .popReward
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    height: 250px;
+    background: url('https://dl.dir.freefiremobile.com/common/web_event/magicarrow/images/dialog_bg.png') no-repeat;
+    background-size: 100% 100%;
+    animation: in 1s forwards;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: none;
+}
+/*.wrap .popReward:after
+{
+    content: 'Selamat';
+    position: absolute;
+    top: -35px;
+    left: -2px;
+    width: 150px;
+    height: 30px;
+    background: #2b3944;
+    border-top-left-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: 'noexit-reg';
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 0 0 2px #333;
+    border: 2px solid gold;
+    border-radius: 3px;
+    letter-spacing: 2px;
+}*/
+@keyframes in
+{
+    from
+    {
+        transform: translate(-50%,-50%) scale(0.0);
+        opacity: 0;
+    }
+    to
+    {
+        transform: translate(-50%,-50%) scale(1);
+        opacity: 1;
+    }
+}
+.wrap .popReward h1
+{
+    font-family: neue;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+    position: relative;
+    text-transform: uppercase;
+    background-image: linear-gradient(#f7e386,#eab434);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.popReward .boxImg
+{
+    margin-top: 15px;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    background: #fff;
+    border: 2px solid gold;
+    border-radius: 3px;
+}
+.popReward .boxImg:before
+{
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: url('https://dl.dir.freefiremobile.com/common/web_event/magicarrow/images/item_bg.png') no-repeat;
+    background-size: 100% 100%;
+}
+.boxImg img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 2px solid #eab434;
+}
+.popReward .claim
+{
+    margin-top: 15px;
+    width: 110px;
+    height: 45px;
+    background: url('https://dl.dir.freefiremobile.com/common/web_event/magicarrow/images/enter_btn.png') no-repeat;
+    background-size: 100% 100%;
+    border: none;
+    color: #fff;
+    font-family: neue;
+    line-height: 46px;
+    text-shadow: 0 0 10px #333;
+    font-size: 18px;
+}
+.popReward .claim:focus, .popReward .claim:hover
+{
+    outline: none;
+}
+.mask
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.50);
+    z-index: 9999;
+    backdrop-filter: blur(3px);
+    display: block;
+}
+
+
+.wrap .trueid
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    height: 200px;
+    background: url('https://cdngarenanow-a.akamaihd.net/webid/FF/hackerryu/dialog_bg%20858x478.png') no-repeat;
+    background-size: 100% 100%;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.trueid h1
+{
+    font-family: neue;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.trueid [type="number"]
+{
+    background: url('https://i.ibb.co/Kx5gHKq/sub-active.png') no-repeat;
+    background-size: 100% 100%;
+    border-radius: 3px;
+    width: 180px;
+    padding-left: 10px;
+    border: none;
+    height: 35px;
+    color: #fff;
+    font-family: neue;
+    margin: 20px 0 20px 0;
+}
+.trueid [type="number"]:focus
+{
+    outline: none;
+}
+.trueid [type="number"]::placeholder
+{
+    color: #fff;
+}
+.trueid .checkid
+{
+    width: 110px;
+    height: 45px;
+    background: url('https://cdngarenanow-a.akamaihd.net/webid/FF/hackerryu/magenta_btn.png') no-repeat;
+    background-size: 100% 100%;
+    border: none;
+    color: #fff;
+    font-family: neue;
+    line-height: 49px;
+    text-shadow: 0 0 10px #333;
+}
+.trueid .checkid:focus, .trueid .checkid:hover
+{
+    outline: none;
+}
+.trueid .checking
+{
+    color: #fff;
+    font-family: neue;
+    font-size: 13px;
+    position: relative;
+    bottom: -10px;
+    letter-spacing: 0.5px;
+    display: none;
+}
+.wrap .toast
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 30px;
+    background: url('https://dl.dir.freefiremobile.com/common/web_event/boxingmachine/images-hash/4f2900f2fdfaf3f77bd599391218f49f.png') no-repeat;
+    background-size: 100% 100%;
+    z-index: 9999;
+    text-align: center;
+    line-height: 31px;
+    align-items: center;
+    justify-content: center;
+    animation: ss 1.5s forwards;
+    display: none;
+    overflow: hidden;
+}
+
+
+/**/
+
+.app .boxlogin
+{
+    margin-top: 35px;
+    position: relative;
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid gold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px;
+}
+.app .boxlogin:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #2b3944;
+    opacity: 0.8;
+}
+.app .boxlogin:after
+{
+    content: 'VERIFIKASI';
+    position: absolute;
+    top: -30px;
+    left: -1px;
+    width: 150px;
+    height: 30px;
+    background: gold;
+    border-top-left-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: 'noexit-reg';
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 0 0 2px #333;
+}
+
+.boxlogin h1
+{
+    margin-top: 10px;
+    font-family: neue;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1px;
+    z-index: 999;
+}
+
+.boxlogin .form-group
+{
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+.boxlogin .form-group:first-child
+{
+    margin-top: -10px;
+}
+.boxlogin .form-group:not(:last-child)
+{
+    margin-bottom: -30px;
+}
+.boxlogin .form-group:last-child
+{
+    margin-top: 20px;
+}
+.form-group input, .form-group select
+{
+    background: url('https://dl.dir.freefiremobile.com/common/web_event/hackerstore6_relaunch/images/blur_btn.png') no-repeat;
+    background-size: 100% 100%;
+    width: 250px;
+    padding-left: 10px;
+    border: none;
+    height: 35px;
+    color: #fff;
+    font-family: neue;
+    margin: 20px 0 20px 0;
+}
+.form-group input:focus, .form-group select:focus
+{
+    outline: none;
+}
+.form-group input::placeholder
+{
+    color: #fff;
+}
+.form-group .submitbtn
+{
+    width: 110px;
+    height: 45px;
+    background: url('https://cdngarenanow-a.akamaihd.net/webid/FF/hackerryu/magenta_btn.png') no-repeat;
+    background-size: 100% 100%;
+    border: none;
+    color: #fff;
+    font-family: neue;
+    line-height: 49px;
+    text-shadow: 0 0 10px #333;
+}
+.form-group .submitbtn:hover, .form-group .submitbtn:focus
+{
+    outline: none;
+}
+.wrap .berhasil
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    height: 200px;
+    background: url('https://cdngarenanow-a.akamaihd.net/webid/FF/hackerryu/dialog_bg%20858x478.png') no-repeat;
+    background-size: 100% 100%;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.berhasil h1
+{
+    font-family: neue;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.berhasil img
+{
+    margin-top: 5px;
+    width: 90px;
+    height: 90px;
+    z-index: 999;
+}
+.berhasil p
+{
+    margin-top: 5px;
+    font-family: neue;
+    color: #fff;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-align: center ;
+}
+@keyframes ss
+{
+    from {
+        width: 0px;
+    }
+    to {
+        width: 350px;
+    }
+}
+.toast p
+{
+    color: #fff;
+    font-family: neue;
+    font-size: 18px;
+}
+@media(min-width: 600px) {
+    .app, footer, .wrap .popReward {
+        width: 400px;
+    }
+}
